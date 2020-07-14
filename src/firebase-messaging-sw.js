@@ -7,7 +7,7 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute(
     new RegExp('https://firebasestorage.googleapis.com/v0/b/cropchien-75aaa.appspot.com/.*'),
-    workbox.strategies.staleWhileRevalidate()
+    new workbox.strategies.StaleWhileRevalidate()
 );
 
 const firebaseConfig = {
